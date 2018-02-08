@@ -11,9 +11,21 @@ var addArray = (title, body) => {
 		body
 	};	
 
-	notes.push(note);
-	var stringify  =fs.writeFileSync('./json/store-data.js',JSON.stringify(note));
+	try{
+		var noteData = fs.readFileSync('./json/store-data.js');
+		notes = JSON.parse(noteData);
+	} catch(e){
+
+	}
+	
+var duplicateNotes = notes.filter((note) => note.title === title  );
+
+	if(duplicateNotes.length ===0 ){
+		notes.push(note);
+		fs.writeFileSync('./json/store-data.js',JSON.stringify(notes));
+	}
 };
+
 
 module.exports = {
 	addNote,
