@@ -1,0 +1,19 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "api",
+  "main": "index.js",
+  "scripts": {
+    "test": "api"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "api",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.14.12",
+    "request": "^2.73.0",
+    "yargs": "^4.8.1"
+  }
+}
