@@ -10,7 +10,7 @@ var geocodeAddress = (address, callback) => {
 				callback('Unable to connect google server');
 			} else if(body.status === "ZERO_RESULTS"){
 				callback('not a valid address');
-			} else if(body.status === "OK"){
+			} else if(body.status === 'OK'){
 				callback(undefined, {
 					address : body.results[0].formatted_address,
 					Longitude : body.results[0].geometry.location.lat,
