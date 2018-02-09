@@ -12,6 +12,7 @@
   "author": "api",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.17.1",
     "nodemon": "^1.14.12",
     "request": "^2.73.0",
     "yargs": "^4.8.1"
