@@ -9,6 +9,14 @@ app.get('/', (req, res) => {
 	// });
 });
 
+app.get('/about', (req, res) => {
+	res.send('about');
+});
+
+app.get('/profile', (req, res) => {
+	res.send('profile');
+});
+
 app.listen(3000);
 
 module.exports.app = app;
